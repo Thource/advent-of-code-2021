@@ -23,7 +23,7 @@ if (!day) {
 const detailedAssert = (a, b) => {
   if (a === b) return;
 
-  console.log(`Assert failed: ${a} !== ${b}`)
+  console.log(`Assert failed: ${typeof a === 'object' ? JSON.stringify(a) : a} !== ${b}`)
   process.exit(1);
 }
 
